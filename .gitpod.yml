@@ -5,5 +5,5 @@
 # Learn more from ready-to-use templates: https://www.gitpod.io/docs/introduction/getting-started/quickstart
 
 tasks:
-  - init: sdk install java 17.0.10-amzn && docker-compose -f src/main/docker/elasticsearch.yml up && npm install && npm run build && ./gradlew build
+  - init: sdk install java 17.0.10-amzn < /dev/null && docker-compose -f src/main/docker/elasticsearch.yml up -d && npm install && npm run build && ./gradlew build
     command: npm run start
